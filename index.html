@@ -1,209 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neva - Join the Waitlist</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f9ff;
-      color: #111;
-      text-align: center;
-      padding: 50px 20px;
-      max-width: 850px;
-      margin: auto;
-    }
+<title>Neva - Your AI Personal Chief of Staff</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #5b5bf7;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-top: 25px;
+}
+
+.description {
+    margin-top: 20px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+input[type="email"] {
+    width: 100%;
+    max-width: 450px;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    background: #5b5bf7;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.security {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.demo-section {
+    margin-top: 80px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 700px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.briefing {
+    display: none;
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 15px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.footer {
+    margin-top: 60px;
+    color: #888;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
+        font-size: 3rem;
     }
 
-    h2 {
-      color: #5b5bf7;
-      font-size: 2rem;
-      margin-bottom: 20px;
+    .subtitle {
+        font-size: 1.3rem;
     }
 
-    p {
-      font-size: 1.15rem;
-      line-height: 1.6;
+    .card {
+        padding: 25px;
     }
-
-    .intro {
-      margin-bottom: 35px;
-    }
-
-    .features {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      margin-top: 35px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      text-align: left;
-    }
-
-    .features h3 {
-      text-align: center;
-      margin-top: 0;
-    }
-
-    .features p {
-      font-size: 1rem;
-      margin: 12px 0;
-    }
-
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      margin-top: 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    input {
-      width: 100%;
-      max-width: 400px;
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      margin-top: 20px;
-      font-size: 1rem;
-    }
-
-    button {
-      background: #5b5bf7;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 10px;
-      margin-top: 15px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    .privacy {
-      font-size: 14px;
-      color: #666;
-      margin-top: 15px;
-    }
-
-    #form-message {
-      margin-top: 15px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <h1>Neva</h1>
+<div class="container">
 
-  <h2>Life is complicated. Keeping track of it shouldn’t be.</h2>
+    <h1>Neva</h1>
 
-  <div class="intro">
-    <p>
-      Neva is an AI-powered life assistant designed to help you stay one step ahead.
+    <div class="subtitle">
+        Your AI Personal Chief of Staff
+    </div>
+
+    <p class="tagline">
+        Never miss what matters.
     </p>
 
-    <p>
-      It helps identify important things before they become problems, highlights
-      opportunities you may have missed, and helps you make better decisions
-      across every area of your life.
+    <p class="description">
+        Neva connects to your email, calendar and accounts to identify appointments,
+        renewals, subscriptions, deadlines, important life events and hidden risks
+        before they become problems.
+        <br><br>
+        It doesn't just find dates.
+        <strong>It connects them.</strong>
     </p>
 
-    <p>
-      Imagine having someone quietly looking out for you 24 hours a day.
-    </p>
-  </div>
+    <div class="card">
 
-  <div class="features">
-    <h3>Neva can help with:</h3>
+        <h2>Join the Waitlist</h2>
 
-    <p>✓ Important appointments and commitments</p>
-    <p>✓ Renewals, subscriptions and recurring costs</p>
-    <p>✓ Travel plans and document expiry dates</p>
-    <p>✓ Important life events and reminders</p>
-    <p>✓ Opportunities to save money</p>
-    <p>✓ Tasks you’ve forgotten about</p>
-    <p>✓ Long-term goals and personal priorities</p>
-    <p>✓ Daily and weekly briefings</p>
-    <p>✓ Recommended actions based on what matters most</p>
-  </div>
+        <p>
+            Be one of the first people to get access when Neva launches.
+        </p>
 
-  <div class="intro">
-    <p><strong>Neva isn’t a calendar.</strong></p>
-    <p><strong>Neva isn’t a to-do list.</strong></p>
-    <p><strong>Neva isn’t another productivity app.</strong></p>
-    <p><strong>Neva is your AI-powered life assistant.</strong></p>
-  </div>
+        <form
+            action="https://formspree.io/f/mwvdeppv"
+            method="POST"
+        >
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
 
-  <div class="box">
-    <h3>Never miss what matters.</h3>
+            <br>
 
-    <p>
-      Join the waitlist and help shape the future of Neva.
-    </p>
+            <button type="submit">
+                Join Waitlist
+            </button>
+        </form>
 
-    <form id="waitlist-form">
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter your email"
-        required
-      />
+        <div class="security">
+            🔒 Your email is only used for Neva updates.
+            No spam. No selling your data. Ever.
+        </div>
 
-      <br />
+    </div>
 
-      <button type="submit">Join Waitlist</button>
+    <div class="demo-section">
 
-      <p class="privacy">
-        🔒 We only use your email to notify you about Neva updates and early access.
-        No spam. Unsubscribe anytime.
-      </p>
+        <h2>Try a Neva Briefing</h2>
 
-      <p id="form-message"></p>
-    </form>
-  </div>
+        <p>
+            Paste some upcoming events and see how Neva could organise them.
+        </p>
 
-  <script>
-    const form = document.getElementById("waitlist-form");
-    const message = document.getElementById("form-message");
+        <textarea
+            id="events"
+            rows="8"
+            placeholder="Example:
 
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
+Dentist tomorrow 10:30
+Car insurance renewal July 1
+Holiday to Spain August 12"
+        ></textarea>
 
-      const formData = new FormData(form);
+        <br>
 
-      message.textContent = "Joining waitlist...";
+        <button onclick="generateBriefing()">
+            Generate Briefing
+        </button>
 
-      try {
-        const response = await fetch("https://formspree.io/f/mwvdeppv", {
-          method: "POST",
-          body: formData,
-          headers: {
-            "Accept": "application/json"
-          }
-        });
+        <div id="briefing" class="briefing"></div>
 
-        if (response.ok) {
-          message.textContent = "✅ You're on the Neva waitlist!";
-          form.reset();
-        } else {
-          message.textContent = "❌ Something went wrong. Please try again.";
-        }
-      } catch (error) {
-        message.textContent = "❌ Something went wrong. Please try again.";
-      }
-    });
-  </script>
+    </div>
+
+    <div class="footer">
+        © 2026 Neva. All rights reserved.
+    </div>
+
+</div>
+
+<script>
+function generateBriefing() {
+
+    const events =
+    document.getElementById("events").value.toLowerCase();
+
+    let items = [];
+
+    if(events.includes("dentist")) {
+        items.push("• You have a dentist appointment coming up.");
+    }
+
+    if(events.includes("insurance")) {
+        items.push("• Your insurance renewal may require attention.");
+    }
+
+    if(events.includes("holiday") || events.includes("flight")) {
+        items.push("• Your travel plans are approaching.");
+    }
+
+    if(events.includes("passport")) {
+        items.push("• Check your passport validity before travel.");
+    }
+
+    if(items.length === 0) {
+        items.push("• Neva detected upcoming commitments that may require review.");
+    }
+
+    const output = `
+        <h3>Good evening.</h3>
+
+        <p>
+        Neva has reviewed your upcoming commitments.
+        </p>
+
+        ${items.join("<br><br>")}
+
+        <h4 style="margin-top:25px;">
+        Recommended Actions
+        </h4>
+
+        <ul>
+            <li>Review upcoming deadlines.</li>
+            <li>Check for overlapping commitments.</li>
+            <li>Prepare anything needed in advance.</li>
+        </ul>
+    `;
+
+    const briefing =
+    document.getElementById("briefing");
+
+    briefing.innerHTML = output;
+    briefing.style.display = "block";
+}
+</script>
 
 </body>
 </html>
