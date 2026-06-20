@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neva - Join the Waitlist</title>
 
   <style>
@@ -13,23 +12,47 @@
       color: #111;
       text-align: center;
       padding: 50px 20px;
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 10px;
     }
 
     h2 {
       color: #5b5bf7;
-      margin-bottom: 30px;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       line-height: 1.6;
+    }
+
+    .intro {
+      margin-bottom: 35px;
+    }
+
+    .features {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      margin-top: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    .features h3 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .features p {
+      font-size: 1rem;
+      margin: 12px 0;
     }
 
     .box {
@@ -65,69 +88,89 @@
       opacity: 0.9;
     }
 
-    #form-message {
-      margin-top: 15px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
     .privacy {
       font-size: 14px;
       color: #666;
       margin-top: 15px;
     }
-  </style>
 
+    #form-message {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
   <h1>Neva</h1>
 
-  <h2>Your AI Personal Chief of Staff</h2>
+  <h2>Life is complicated. Keeping track of it shouldn’t be.</h2>
 
-  <p>
-    Never miss what matters.
-  </p>
+  <div class="intro">
+    <p>
+      Neva is an AI-powered life assistant designed to help you stay one step ahead.
+    </p>
 
-  <p>
-    Neva connects to your email, calendar and accounts to identify
-    appointments, renewals, subscriptions, deadlines and important life events
-    before they become problems.
-  </p>
+    <p>
+      It helps identify important things before they become problems, highlights
+      opportunities you may have missed, and helps you make better decisions
+      across every area of your life.
+    </p>
+
+    <p>
+      Imagine having someone quietly looking out for you 24 hours a day.
+    </p>
+  </div>
+
+  <div class="features">
+    <h3>Neva can help with:</h3>
+
+    <p>✓ Important appointments and commitments</p>
+    <p>✓ Renewals, subscriptions and recurring costs</p>
+    <p>✓ Travel plans and document expiry dates</p>
+    <p>✓ Important life events and reminders</p>
+    <p>✓ Opportunities to save money</p>
+    <p>✓ Tasks you’ve forgotten about</p>
+    <p>✓ Long-term goals and personal priorities</p>
+    <p>✓ Daily and weekly briefings</p>
+    <p>✓ Recommended actions based on what matters most</p>
+  </div>
+
+  <div class="intro">
+    <p><strong>Neva isn’t a calendar.</strong></p>
+    <p><strong>Neva isn’t a to-do list.</strong></p>
+    <p><strong>Neva isn’t another productivity app.</strong></p>
+    <p><strong>Neva is your AI-powered life assistant.</strong></p>
+  </div>
 
   <div class="box">
+    <h3>Never miss what matters.</h3>
 
-```
-<h3>Join the Waitlist</h3>
+    <p>
+      Join the waitlist and help shape the future of Neva.
+    </p>
 
-<p>
-  Be one of the first people to get access when Neva launches.
-</p>
+    <form id="waitlist-form">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
 
-<form id="waitlist-form">
+      <br />
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Enter your email"
-    required
-  >
+      <button type="submit">Join Waitlist</button>
 
-  <br>
+      <p class="privacy">
+        🔒 We only use your email to notify you about Neva updates and early access.
+        No spam. Unsubscribe anytime.
+      </p>
 
-  <button type="submit">Join Waitlist</button>
-
-  <p class="privacy">
-    🔒 We only use your email to notify you about Neva updates and early access.
-    No spam. Unsubscribe anytime.
-  </p>
-
-  <p id="form-message"></p>
-
-</form>
-```
-
+      <p id="form-message"></p>
+    </form>
   </div>
 
   <script>
@@ -135,7 +178,6 @@
     const message = document.getElementById("form-message");
 
     form.addEventListener("submit", async function (event) {
-
       event.preventDefault();
 
       const formData = new FormData(form);
@@ -143,7 +185,6 @@
       message.textContent = "Joining waitlist...";
 
       try {
-
         const response = await fetch("https://formspree.io/f/mwvdeppv", {
           method: "POST",
           body: formData,
@@ -153,22 +194,14 @@
         });
 
         if (response.ok) {
-
           message.textContent = "✅ You're on the Neva waitlist!";
           form.reset();
-
         } else {
-
           message.textContent = "❌ Something went wrong. Please try again.";
-
         }
-
       } catch (error) {
-
         message.textContent = "❌ Something went wrong. Please try again.";
-
       }
-
     });
   </script>
 
