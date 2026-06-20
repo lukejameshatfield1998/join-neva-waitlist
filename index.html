@@ -6,35 +6,44 @@
 <title>Neva - Your AI Personal Chief of Staff</title>
 
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#222}
-.container{max-width:1000px;margin:auto;padding:40px 20px;text-align:center}
-h1{font-size:4rem;margin-bottom:10px}
-.subtitle{color:#5b5bf7;font-size:1.8rem;font-weight:bold}
-.tagline{font-size:1.3rem;margin-top:20px}
-.card{background:white;padding:40px;border-radius:20px;margin-top:40px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-input,textarea{width:100%;max-width:700px;padding:15px;border-radius:10px;border:1px solid #ddd;font-size:16px}
-button{background:#5b5bf7;color:white;border:none;padding:14px 28px;border-radius:10px;cursor:pointer;font-size:16px;margin-top:15px}
-button:hover{opacity:.9}
-.security{margin-top:20px;color:#666;font-size:14px}
-.section{margin-top:80px}
-.features{max-width:700px;margin:auto;text-align:left;line-height:2;font-size:1.1rem}
-.briefing{display:none;background:white;padding:25px;border-radius:15px;margin-top:25px;max-width:700px;margin-left:auto;margin-right:auto;text-align:left;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at top left,rgba(91,91,247,.35),transparent 35%),#070914;color:white}
+.container{max-width:1000px;margin:auto;padding:45px 20px;text-align:center}
+.badge{color:#8f9bff;font-weight:bold;letter-spacing:.08em}
+h1{font-size:4.5rem;margin:10px 0}
+.subtitle{color:#c7ccff;font-size:1.8rem;font-weight:bold}
+.tagline{color:#aab0c0;font-size:1.25rem;margin-top:20px}
+.card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:34px;border-radius:24px;margin-top:35px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+input{width:100%;max-width:460px;padding:15px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#111827;color:white;font-size:16px}
+button,.beta-button{display:inline-block;background:#5b5bf7;color:white;border:none;padding:14px 26px;border-radius:14px;cursor:pointer;font-size:16px;font-weight:bold;margin-top:15px;text-decoration:none}
+button:hover,.beta-button:hover{opacity:.9}
+.security{margin-top:18px;color:#8f98ad;font-size:14px}
+.section{margin-top:70px}
+.features{max-width:760px;margin:auto;display:grid;gap:14px;text-align:left}
+.feature{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px;color:#d7dbff}
+.footer{margin-top:80px;color:#6f7890;font-size:14px}
 #form-message{font-weight:bold;margin-top:15px}
-.footer{margin-top:80px;color:#888;font-size:14px}
-@media(max-width:768px){h1{font-size:3rem}.subtitle{font-size:1.3rem}.card{padding:25px}}
+@media(max-width:768px){h1{font-size:3.2rem}.subtitle{font-size:1.3rem}.card{padding:24px}}
 </style>
 </head>
 
 <body>
 <div class="container">
 
+<p class="badge">NEVA EARLY ACCESS</p>
 <h1>Neva</h1>
 <div class="subtitle">Your AI Personal Chief of Staff</div>
-<p class="tagline">Never miss what matters.</p>
+<p class="tagline">Neva helps you stay ahead of priorities, appointments, risks and commitments — before they become problems.</p>
+
+<div class="card">
+<h2>Try the Neva Beta</h2>
+<p style="color:#aab0c0;">Experience the first working version of Neva’s AI schedule analysis.</p>
+
+<a class="beta-button" href="https://neva-beta.vercel.app/" target="_blank">🚀 Launch Neva Beta</a>
+</div>
 
 <div class="card">
 <h2>Join the Waitlist</h2>
-<p>Be one of the first people to get access when Neva launches.</p>
+<p style="color:#aab0c0;">Be one of the first people to get access as Neva develops.</p>
 
 <form id="waitlist-form">
 <input type="email" name="email" placeholder="Enter your email" required>
@@ -46,34 +55,18 @@ button:hover{opacity:.9}
 </div>
 
 <div class="section">
-<h2>Try a Neva Briefing</h2>
-<p>Paste a few upcoming events and see how Neva could help organise them.</p>
+<h2>What Neva Is Becoming</h2>
 
-<textarea id="events" rows="8" placeholder="Example:
-
-Dentist tomorrow 10:30
-Car insurance renewal July 1
-Holiday to Spain August 12"></textarea>
-
-<br>
-<button onclick="generateBriefing()">Generate Briefing</button>
-<div id="briefing" class="briefing"></div>
-</div>
-
-<div class="section">
-<h2>What Neva Does</h2>
 <div class="features">
-✓ Spots renewals before they cost you money<br>
-✓ Tracks appointments, commitments and deadlines<br>
-✓ Detects hidden conflicts across your schedule<br>
-✓ Finds important emails requiring action<br>
-✓ Highlights subscriptions and recurring payments<br>
-✓ Identifies risks before they become problems<br>
-✓ Connects information across your digital life<br>
-✓ Creates daily briefings so you know what matters
+<div class="feature">✓ Proactively spots scheduling conflicts and hidden risks</div>
+<div class="feature">✓ Builds daily briefings so you know what matters</div>
+<div class="feature">✓ Helps prioritise tasks, appointments and commitments</div>
+<div class="feature">✓ Connects information across your digital life</div>
+<div class="feature">✓ Surfaces upcoming renewals, deadlines and life admin</div>
+<div class="feature">✓ Acts like an AI Chief of Staff, not just another chatbot</div>
 </div>
 
-<p style="margin-top:30px;font-size:1.2rem;">
+<p style="margin-top:30px;font-size:1.2rem;color:#c7ccff;">
 Neva doesn't just find dates. <strong>It connects them.</strong>
 </p>
 </div>
@@ -83,61 +76,31 @@ Neva doesn't just find dates. <strong>It connects them.</strong>
 </div>
 
 <script>
-const form = document.getElementById("waitlist-form");
-const message = document.getElementById("form-message");
+const form=document.getElementById("waitlist-form");
+const message=document.getElementById("form-message");
 
-form.addEventListener("submit", async function(event){
+form.addEventListener("submit",async function(event){
   event.preventDefault();
+  const formData=new FormData(form);
+  message.textContent="Joining waitlist...";
 
-  const formData = new FormData(form);
-  message.textContent = "Joining waitlist...";
-
-  try {
-    const response = await fetch("https://formspree.io/f/mwvdeppv", {
-      method: "POST",
-      body: formData,
-      headers: { "Accept": "application/json" }
+  try{
+    const response=await fetch("https://formspree.io/f/mwvdeppv",{
+      method:"POST",
+      body:formData,
+      headers:{"Accept":"application/json"}
     });
 
-    if (response.ok) {
-      message.textContent = "✅ You're on the Neva waitlist!";
+    if(response.ok){
+      message.textContent="✅ You're on the Neva waitlist!";
       form.reset();
-    } else {
-      message.textContent = "❌ Something went wrong. Please try again.";
+    }else{
+      message.textContent="❌ Something went wrong. Please try again.";
     }
-  } catch(error) {
-    message.textContent = "❌ Something went wrong. Please try again.";
+  }catch(error){
+    message.textContent="❌ Something went wrong. Please try again.";
   }
 });
-
-function generateBriefing(){
-  const events = document.getElementById("events").value.toLowerCase();
-  let findings = [];
-
-  if(events.includes("dentist")) findings.push("• You have a dentist appointment coming up.");
-  if(events.includes("insurance")) findings.push("• Your insurance renewal may require attention.");
-  if(events.includes("holiday") || events.includes("flight")) findings.push("• Your travel plans are approaching.");
-  if(events.includes("passport")) findings.push("• Check passport validity before travel.");
-  if(events.includes("subscription")) findings.push("• Review recurring subscriptions.");
-
-  if(findings.length === 0){
-    findings.push("• Neva detected upcoming commitments that may require review.");
-  }
-
-  document.getElementById("briefing").innerHTML = `
-    <h3>Good evening.</h3>
-    <p>Neva has reviewed your upcoming commitments.</p>
-    ${findings.join("<br><br>")}
-    <h4 style="margin-top:25px;">Recommended Actions</h4>
-    <ul>
-      <li>Review upcoming deadlines.</li>
-      <li>Check for overlapping commitments.</li>
-      <li>Prepare anything required in advance.</li>
-    </ul>
-  `;
-
-  document.getElementById("briefing").style.display = "block";
-}
 </script>
 
 </body>
