@@ -3,275 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Neva - Your AI Personal Chief of Staff</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #222;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #5b5bf7;
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.tagline {
-    font-size: 1.3rem;
-    margin-top: 25px;
-}
-
-.description {
-    margin-top: 20px;
-    line-height: 1.7;
-    font-size: 1.1rem;
-}
-
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    margin-top: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-input[type="email"] {
-    width: 100%;
-    max-width: 450px;
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-button {
-    background: #5b5bf7;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-.security {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-}
-
-.demo-section {
-    margin-top: 80px;
-}
-
-textarea {
-    width: 100%;
-    max-width: 700px;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-.briefing {
-    display: none;
-    background: white;
-    padding: 25px;
-    margin-top: 25px;
-    border-radius: 15px;
-    text-align: left;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.footer {
-    margin-top: 60px;
-    color: #888;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
-
-    .subtitle {
-        font-size: 1.3rem;
-    }
-
-    .card {
-        padding: 25px;
-    }
-}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#222}
+.container{max-width:1000px;margin:auto;padding:40px 20px;text-align:center}
+h1{font-size:4rem;margin-bottom:10px}
+.subtitle{color:#5b5bf7;font-size:1.8rem;font-weight:bold}
+.tagline{font-size:1.3rem;margin-top:20px}
+.card{background:white;padding:40px;border-radius:20px;margin-top:40px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+input,textarea{width:100%;max-width:700px;padding:15px;border-radius:10px;border:1px solid #ddd;font-size:16px}
+button{background:#5b5bf7;color:white;border:none;padding:14px 28px;border-radius:10px;cursor:pointer;font-size:16px;margin-top:15px}
+button:hover{opacity:.9}
+.security{margin-top:20px;color:#666;font-size:14px}
+.section{margin-top:80px}
+.features{max-width:700px;margin:auto;text-align:left;line-height:2;font-size:1.1rem}
+.briefing{display:none;background:white;padding:25px;border-radius:15px;margin-top:25px;max-width:700px;margin-left:auto;margin-right:auto;text-align:left;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+#form-message{font-weight:bold;margin-top:15px}
+.footer{margin-top:80px;color:#888;font-size:14px}
+@media(max-width:768px){h1{font-size:3rem}.subtitle{font-size:1.3rem}.card{padding:25px}}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-    <h1>Neva</h1>
+<h1>Neva</h1>
+<div class="subtitle">Your AI Personal Chief of Staff</div>
+<p class="tagline">Never miss what matters.</p>
 
-    <div class="subtitle">
-        Your AI Personal Chief of Staff
-    </div>
+<div class="card">
+<h2>Join the Waitlist</h2>
+<p>Be one of the first people to get access when Neva launches.</p>
 
-    <p class="tagline">
-        Never miss what matters.
-    </p>
+<form id="waitlist-form">
+<input type="email" name="email" placeholder="Enter your email" required>
+<br>
+<button type="submit">Join Waitlist</button>
+<p class="security">🔒 Your email is only used for Neva updates. No spam. No selling your data. Ever.</p>
+<p id="form-message"></p>
+</form>
+</div>
 
-    <p class="description">
-        Neva connects to your email, calendar and accounts to identify appointments,
-        renewals, subscriptions, deadlines, important life events and hidden risks
-        before they become problems.
-        <br><br>
-        It doesn't just find dates.
-        <strong>It connects them.</strong>
-    </p>
+<div class="section">
+<h2>Try a Neva Briefing</h2>
+<p>Paste a few upcoming events and see how Neva could help organise them.</p>
 
-    <div class="card">
-
-        <h2>Join the Waitlist</h2>
-
-        <p>
-            Be one of the first people to get access when Neva launches.
-        </p>
-
-        <form
-            action="https://formspree.io/f/mwvdeppv"
-            method="POST"
-        >
-            <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-            >
-
-            <br>
-
-            <button type="submit">
-                Join Waitlist
-            </button>
-        </form>
-
-        <div class="security">
-            🔒 Your email is only used for Neva updates.
-            No spam. No selling your data. Ever.
-        </div>
-
-    </div>
-
-    <div class="demo-section">
-
-        <h2>Try a Neva Briefing</h2>
-
-        <p>
-            Paste some upcoming events and see how Neva could organise them.
-        </p>
-
-        <textarea
-            id="events"
-            rows="8"
-            placeholder="Example:
+<textarea id="events" rows="8" placeholder="Example:
 
 Dentist tomorrow 10:30
 Car insurance renewal July 1
-Holiday to Spain August 12"
-        ></textarea>
+Holiday to Spain August 12"></textarea>
 
-        <br>
+<br>
+<button onclick="generateBriefing()">Generate Briefing</button>
+<div id="briefing" class="briefing"></div>
+</div>
 
-        <button onclick="generateBriefing()">
-            Generate Briefing
-        </button>
+<div class="section">
+<h2>What Neva Does</h2>
+<div class="features">
+✓ Spots renewals before they cost you money<br>
+✓ Tracks appointments, commitments and deadlines<br>
+✓ Detects hidden conflicts across your schedule<br>
+✓ Finds important emails requiring action<br>
+✓ Highlights subscriptions and recurring payments<br>
+✓ Identifies risks before they become problems<br>
+✓ Connects information across your digital life<br>
+✓ Creates daily briefings so you know what matters
+</div>
 
-        <div id="briefing" class="briefing"></div>
+<p style="margin-top:30px;font-size:1.2rem;">
+Neva doesn't just find dates. <strong>It connects them.</strong>
+</p>
+</div>
 
-    </div>
-
-    <div class="footer">
-        © 2026 Neva. All rights reserved.
-    </div>
+<div class="footer">© 2026 Neva. All rights reserved.</div>
 
 </div>
 
 <script>
-function generateBriefing() {
+const form = document.getElementById("waitlist-form");
+const message = document.getElementById("form-message");
 
-    const events =
-    document.getElementById("events").value.toLowerCase();
+form.addEventListener("submit", async function(event){
+  event.preventDefault();
 
-    let items = [];
+  const formData = new FormData(form);
+  message.textContent = "Joining waitlist...";
 
-    if(events.includes("dentist")) {
-        items.push("• You have a dentist appointment coming up.");
+  try {
+    const response = await fetch("https://formspree.io/f/mwvdeppv", {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      message.textContent = "✅ You're on the Neva waitlist!";
+      form.reset();
+    } else {
+      message.textContent = "❌ Something went wrong. Please try again.";
     }
+  } catch(error) {
+    message.textContent = "❌ Something went wrong. Please try again.";
+  }
+});
 
-    if(events.includes("insurance")) {
-        items.push("• Your insurance renewal may require attention.");
-    }
+function generateBriefing(){
+  const events = document.getElementById("events").value.toLowerCase();
+  let findings = [];
 
-    if(events.includes("holiday") || events.includes("flight")) {
-        items.push("• Your travel plans are approaching.");
-    }
+  if(events.includes("dentist")) findings.push("• You have a dentist appointment coming up.");
+  if(events.includes("insurance")) findings.push("• Your insurance renewal may require attention.");
+  if(events.includes("holiday") || events.includes("flight")) findings.push("• Your travel plans are approaching.");
+  if(events.includes("passport")) findings.push("• Check passport validity before travel.");
+  if(events.includes("subscription")) findings.push("• Review recurring subscriptions.");
 
-    if(events.includes("passport")) {
-        items.push("• Check your passport validity before travel.");
-    }
+  if(findings.length === 0){
+    findings.push("• Neva detected upcoming commitments that may require review.");
+  }
 
-    if(items.length === 0) {
-        items.push("• Neva detected upcoming commitments that may require review.");
-    }
+  document.getElementById("briefing").innerHTML = `
+    <h3>Good evening.</h3>
+    <p>Neva has reviewed your upcoming commitments.</p>
+    ${findings.join("<br><br>")}
+    <h4 style="margin-top:25px;">Recommended Actions</h4>
+    <ul>
+      <li>Review upcoming deadlines.</li>
+      <li>Check for overlapping commitments.</li>
+      <li>Prepare anything required in advance.</li>
+    </ul>
+  `;
 
-    const output = `
-        <h3>Good evening.</h3>
-
-        <p>
-        Neva has reviewed your upcoming commitments.
-        </p>
-
-        ${items.join("<br><br>")}
-
-        <h4 style="margin-top:25px;">
-        Recommended Actions
-        </h4>
-
-        <ul>
-            <li>Review upcoming deadlines.</li>
-            <li>Check for overlapping commitments.</li>
-            <li>Prepare anything needed in advance.</li>
-        </ul>
-    `;
-
-    const briefing =
-    document.getElementById("briefing");
-
-    briefing.innerHTML = output;
-    briefing.style.display = "block";
+  document.getElementById("briefing").style.display = "block";
 }
 </script>
 
